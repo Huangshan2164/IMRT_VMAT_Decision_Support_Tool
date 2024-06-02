@@ -1,0 +1,39 @@
+# IMRT and VMAT Decision Support Tool
+
+## Overview
+
+This repository contains the implementation of a regression model-based decision support tool designed to assist clinicians in choosing between Intensity-Modulated Radiation Therapy (IMRT) and Volumetric Modulated Arc Therapy (VMAT) for treating thoracic esophageal cancer.
+
+## Tool Description
+
+The decision support tool uses logistic regression models (P1 and P2) to predict the likelihood of plan compliance for IMRT and VMAT techniques. Key features used in the models include:
+
+- **PTV Volume**: The volume of the Planning Target Volume (PTV).
+- **Total Lung Volume (TLV)**: The total volume of the lungs.
+- **TLV/PTV Ratio**: The ratio of Total Lung Volume to PTV volume.
+- **THV/PTV Ratio**: The ratio of Total Heart Volume to PTV volume.
+- **PTV Length**: The length of the PTV.
+
+## Model Implementation
+
+The models were developed using Varian Eclipse TPS and have been validated with clinical data. The implementation details are as follows:
+
+- **Data Collection**: The clinical data was collected from patients undergoing radiotherapy for thoracic esophageal cancer.
+- **Model Training**: Logistic regression models were trained to predict the likelihood of plan compliance.
+- **Model Evaluation**: The models were evaluated using metrics such as sensitivity, specificity, accuracy, Matthews Correlation Coefficient (MCC), and the Area Under the Receiver Operating Characteristic Curve (AUROC).
+
+## Usage
+
+Clinicians can use this tool to:
+
+1. **Select the Optimal Technique**: The tool predicts whether IMRT or VMAT would be more compliant based on patient-specific parameters.
+2. **Assess Plan Compliance**: It provides an early assessment of plan compliance likelihood, allowing for adjustments before the final plan is executed.
+
+## Access and Contributions
+
+The decision support tool is publicly accessible and can be found at [GitHub Repository](https://github.com/Huangshan2164/IMRT_VMAT_Decision_Support_Tool). Contributions to the tool are welcome. Please follow the contribution guidelines provided in the repository.
+
+## Future Work
+
+Future research will focus on refining the models, expanding validation efforts, and integrating additional predictive factors to enhance model accuracy and clinical applicability.
+
